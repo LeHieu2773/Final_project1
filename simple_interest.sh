@@ -8,17 +8,20 @@
 # [your-username]
 
 # Input:
-# income, total monthly income
-# expenses, total monthly expenses
+# p, principal amount
+# t, time period in years
+# r, annual rate of interest
 
 # Output:
-# remaining balance = income - expenses
+# simple interest = p*t*r
 
-echo "Enter your total monthly income:"
-read income
-echo "Enter your total expenses:"
-read expenses
+echo "Enter the principal:"
+read p
+echo "Enter rate of interest per year:"
+read r
+echo "Enter time period in years:"
+read t
 
-balance=`expr $income - $expenses`
-
-echo "Your remaining budget is: $balance"
+s=$(expr $p \* $t \* $r / 100)
+echo "The simple interest is: "
+echo $s
